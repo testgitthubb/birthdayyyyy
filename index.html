@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Mohaddese</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes colorChange {
+            0% { color: #ff7675; }
+            25% { color: #74b9ff; }
+            50% { color: #55efc4; }
+            75% { color: #a29bfe; }
+            100% { color: #ffeaa7; }
+        }
+        
+        @keyframes cake {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        h1 {
+            color: #ff7675;
+            animation: bounce 2s infinite;
+        }
+        
+        .message {
+            line-height: 1.8;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        
+        .cake {
+            font-size: 40px;
+            display: inline-block;
+            animation: cake 3s infinite, colorChange 5s infinite;
+            margin: 15px 0;
+        }
+        
+        .signature {
+            font-style: italic;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fdcb6e;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>محدثه عزیزم،</h1>
+        <div class="message">
+            تولدت مبارک! <span style="font-size: 20px;">💐✨</span> میدونم دیر شده، اما دلم نمیخوااد حتی با تاخیر هم بهت تبریک نگم. واقعا متاسفم که یادم نبود، این روز خاص رو از دست دادم؛ اما قول میدم به محض اینکه بتونیم دور هم جمع بشیم و یه جشن کوچولو برپا کنیم! <span class="cake">🎂</span>
+            <br><br>
+            همیشه خوشحال و پیروز باشی، امیدوارم سال جدیدت پر از موفقیت و خوشی باشه! به زودی میبینمت تا حضوری بخندیم و جشن بگیریم. <span style="font-size: 20px;">😊💛</span>
+        </div>
+        <div class="signature">
+            با کلی عذرخواهی و آرزوی بهترینا برات،<br>
+            حمیدرضا
+        </div>
+    </div>
+
+    <script>
+        // ایجاد کانفتی
+        function createConfetti() {
+            const colors = ['#ff7675', '#74b9ff', '#55efc4', '#a29bfe', '#ffeaa7'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = -10 + 'px';
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                const size = Math.random() * 10 + 5;
+                confetti.style.width = size + 'px';
+                confetti.style.height = size + 'px';
+                
+                document.body.appendChild(confetti);
+                
+                const animationDuration = Math.random() * 3 + 2;
+                
+                confetti.animate([
+                    { top: -10 + 'px', opacity: 1 },
+                    { top: 100 + 'vh', opacity: 0 }
+                ], {
+                    duration: animationDuration * 1000,
+                    delay: Math.random() * 2000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
+                });
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // اجرای کانفتی هنگام کلیک
+        document.addEventListener('click', createConfetti);
+        
+        // اجرای خودکار کانفتی بعد از 1 ثانیه
+        setTimeout(createConfetti, 1000);
+    </script>
+</body>
+</html>
