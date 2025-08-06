@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Mohaddese</title>
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
     <style>
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -30,7 +32,7 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Vazir', 'Lalezar', sans-serif;
             background-color: #f9f7f7;
             display: flex;
             justify-content: center;
@@ -53,12 +55,14 @@
         h1 {
             color: #ff7675;
             animation: bounce 2s infinite;
+            font-family: 'Lalezar', cursive;
+            font-size: 2rem;
         }
         
         .message {
             line-height: 1.8;
             margin: 20px 0;
-            font-size: 16px;
+            font-size: 1.1rem;
         }
         
         .cake {
@@ -72,6 +76,7 @@
             font-style: italic;
             margin-top: 20px;
             color: #666;
+            font-size: 1rem;
         }
         
         .confetti {
@@ -81,15 +86,28 @@
             background-color: #fdcb6e;
             opacity: 0;
         }
+        
+        .heart {
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <h1>محدثه عزیزم،</h1>
         <div class="message">
-            تولدت مبارک! <span style="font-size: 20px;">💐✨</span> میدونم دیر شده، اما دلم نمیخوااد حتی با تاخیر هم بهت تبریک نگم. واقعا متاسفم که یادم نبود، این روز خاص رو از دست دادم؛ اما قول میدم به محض اینکه بتونیم دور هم جمع بشیم و یه جشن کوچولو برپا کنیم! <span class="cake">🎂</span>
+            تولدت مبارک! <span class="heart" style="font-size: 20px;">💐✨</span> میدونم دیر شده، اما دلم نمیخوااد حتی با تاخیر هم بهت تبریک نگم. واقعا متاسفم که یادم نبود، این روز خاص رو از دست دادم؛ اما قول میدم به محض اینکه بتونیم دور هم جمع بشیم و یه جشن کوچولو برپا کنیم! <span class="cake">🎂</span>
             <br><br>
-            همیشه خوشحال و پیروز باشی، امیدوارم سال جدیدت پر از موفقیت و خوشی باشه! به زودی میبینمت تا حضوری بخندیم و جشن بگیریم. <span style="font-size: 20px;">😊💛</span>
+            همیشه خوشحال و پیروز باشی، امیدوارم سال جدیدت پر از موفقیت و خوشی باشه! به زودی میبینمت تا حضوری بخندیم و جشن بگیریم. <span class="heart" style="font-size: 20px;">😊💛</span>
         </div>
         <div class="signature">
             با کلی عذرخواهی و آرزوی بهترینا برات،<br>
